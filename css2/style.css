@@ -1,0 +1,16 @@
+
+button.btn.btn-outline-secondary {
+	margin-top:20px;
+	margin-left:628px;
+	font-weight:bold;
+  }
+  div canvas {
+	margin-left:261px;
+	margin-top:85px;
+	width: 300px;
+	height:300px;
+  }
+  div .label-container {
+	margin-top:0px;
+	font-size:10px;
+  }

@@ -1,0 +1,135 @@
+body {
+    min-height: 80vh;
+    position: relative;
+}
+
+.dtnBox {
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: 250px;
+}
+
+.dtn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0;
+    color: #FFF;
+    cursor: pointer;
+    background: #b4c7e7;
+    border: 0;
+    transition: all .3s;
+}
+
+.dtn:focus {
+    outline: none;
+}
+
+.dtn:hover {
+    background: #917a7a;
+    box-shadow: 0 0 10px #917a7a;
+}
+
+.dtn.active {
+    background: #ff7f7f;
+    box-shadow: 0 0 10px #ff7f7f;
+}
+
+.dtn + .dtn {
+    margin-left: 20px;
+}
+
+.dtn:disabled {
+    cursor: default;
+    background: rgb(243, 246, 251);
+}
+
+.dtn:disabled:hover {
+    background: rgba(154, 205, 50, 0.5);
+    box-shadow: 0 0 0 transparent;
+}
+
+.alert {
+    margin: 3em 0;
+    color: #ff7f7f;
+    font-weight: bold;
+    font-size: 20px;
+    display: none;
+}
+
+.circle, .circle-inner {
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.circle {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(to right, #b4c7e729 50%, #b4c7e7 0);
+    z-index: 2;
+}
+
+.cover {
+    margin-left: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 / 50%;
+    background: #f3f6fb;
+    transform-origin: left;
+    z-index: 1;
+}
+
+.cover.animate {
+    animation: spin 30s linear infinite, bg 60s step-end infinite;
+}
+
+.circle-inner {
+    width: 320px;
+    height: 320px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.circle-inner span {
+    font-size: 30px;
+    letter-spacing: 0.5em;
+    color: #b4c7e7;
+    font-weight: bold;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(0.5turn);
+    }
+}
+
+@keyframes bg {
+    0% {
+        background: #f3f6fb;
+    }
+    50% {
+        background: #917a7a;
+    }
+}
+/* 코드펜 */
+
+div.circle {
+    left:550px;
+}
+div.dtnBox {
+    left:550px;
+}
